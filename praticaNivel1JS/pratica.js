@@ -146,6 +146,133 @@ if (poderInimigo <= 0) {
     
 }
 
+// PARTE 3 - CONTINUAÇÃO DA SUA JORNADA DO NÍVEL 1 E 2
+//Etapa 1 
+let inventario = ["Poção de Vida", " Lâmino do Molesto", " Carapaça do Éter Vivo"];
+let aliados = ["Ichigo", "Vacivus", "Guts"];
+let inimigosEncontrados = ["Claudinei do Pneu", "Mohg"];
+let salasCastelo = ["Biblioteca Arcana", "Armadilha de Cristal", "Torre do Tempo"];
+let tesouroColetado = [];
 
+console.log("-----------------------------------------------------------");
+console.log(nome + " ADENTRA O CASTELO DOS ARRAYS");
+console.log("Após as vitórias dos níveis anteriores, nosso herói chegou ao castelo lendário...");
+console.log("Inventário inicial: " + inventario.length + " itens mágicos");
 
+//Etapa 2 
+let pocoesEncontradas = ["Cura Maior", "Força Titânica", "Invisibilidade"];
 
+console.log("Primeira poção encontrada: " + pocoesEncontradas[0]);
+console.log("Total de poções mágicas: " + pocoesEncontradas.length);
+
+inventario[0] = "Poção de Vida Suprema"; 
+console.log(nome + " aprimorou uma poção!");
+
+inventario.push(" Anel de Proteção"); 
+console.log("Novo item adicionado! Inventário: " + inventario);
+
+let itemRemovido = inventario.pop(); 
+console.log("Item removido: " + itemRemovido);
+console.log("Inventário atual: " + inventario);
+
+//Etapa 3
+console.log("Começando exploração das " + salasCastelo.length + " salas místicas...");
+
+for (let i = 0; i < salasCastelo.length; i++) {
+    console.log("Sala " + (i + 1) + ": " + salasCastelo[i]);
+    if (i === 0) {
+        console.log( nome + " encontra pergaminhos antigos!");
+        xp += 50;
+        } else if (i === 1) {
+        console.log("Cristais brilhantes concedem poder mágico!");
+        tesouroColetado.push("Cristal de Poder");
+        } else {
+        console.log("O tempo distorce ao redor de " + nome + "!");
+        vidaAtual -= 10; 
+        }
+        }
+
+        console.log("Exploração completa! XP: " + xp + " | Vida: " + vidaAtual);
+
+//Etapa 4 
+console.log(nome + " convoca seus aliados para a batalha final:");
+
+for (let i = 0; i < aliados.length; i++) {
+    let aliado = aliados[i];
+    console.log("Aliado " + (i + 1) + ": " + aliado + " se junta à missão!");
+    
+    if (i === 0) { 
+    console.log("Como líder mágico, " + aliado + " multiplica o poder da equipe!");
+    ouro += 50;
+    } else if (i === 1) { 
+    console.log("Como defensor principal, " + aliado + " fortalece a resistência!");
+    vidaMaxima += 30;
+    } else { 
+    console.log("Como especialista, " + aliado + " aprimora táticas de combate!");
+    xp += 40;
+    }
+    }
+
+    console.log("Equipe completa! Ouro: " + ouro + " | Vida máxima: " + vidaMaxima);
+
+//Etapa 5
+let inimigosBatalha = ["Ziegfried"];
+let danoRecebido = [];
+
+console.log( nome + " enfrenta " + inimigosBatalha.length + " inimigos épicos!");
+
+for (let i = 0; i < inimigosBatalha.length; i++) {
+    let inimigo = inimigosBatalha[i];
+    let dano = Math.floor(Math.random() * 30) + 10; 
+    
+    console.log("Rodada " + (i + 1) + " - Enfrentando: " + inimigo);
+    console.log(nome + " causa " + dano + " de dano!");
+    
+    danoRecebido.push(dano);
+
+    if (i === 0) {
+    console.log("Primeira vitória! Cristais fragmentados concedem bônus!");
+    tesouroColetado.push("Fragmento de Cristal");
+    } else if (i === 1) {
+    console.log("Segunda batalha! As sombras drenam energia, mas " + nome + " resiste!");
+    vidaAtual -= 15;
+    } else {
+    console.log("Batalha final! O dragão recua! Vitória épica alcançada!");
+    xp += 100;
+    tesouroColetado.push("Escama Dragônica");
+    }
+    }
+
+    let danoTotal = 0;
+    for (let i = 0; i < danoRecebido.length; i++) {
+    danoTotal += danoRecebido[i];
+    console.log("Rodada " + (i + 1) + " - Dano: " + danoRecebido[i]);
+    }
+    
+    console.log("Dano total causado: " + danoTotal);
+    console.log("Tesouros coletados: " + tesouroColetado.length + " itens épicos!");
+
+//Etapa 6
+console.log("Estatísticas Finais da Aventura:");
+console.log("• Nível alcançado: " + nivel);
+console.log("• Experiência total: " + xp);
+console.log("• Vida restante: " + vidaAtual + "/" + vidaMaxima);
+console.log("• Ouro acumulado: " + ouro);
+console.log("• Itens no inventário: " + inventario.length);
+console.log("• Aliados conquistados: " + aliados.length);
+console.log("• Tesouros épicos: " + tesouroColetado.length);
+
+//lore
+console.log("A LENDA CONTINUA...");
+console.log("Após conquistar o Castelo dos Arrays, " + nome + " emergiu transformado.");
+console.log("O domínio sobre as coleções arcanas fluía em suas veias como magia pura.");
+console.log("Cada loop executado havia forjado sua mente em algoritmos de ferro e determinação.");
+console.log("Os arrays sussurravam segredos ancestrais, revelando padrões ocultos da realidade.");
+console.log("Aliados admiravam sua capacidade de organizar caos em estruturas harmoniosas.");
+console.log("O inventário repleto de artefatos místicos brilhava com poder recém-descoberto.");
+console.log("Mas no horizonte, novas aventuras aguardavam o Mestre dos Códigos Arcanos.");
+console.log("Rumores falavam de torres onde funções aguardavam para serem dominadas.");
+console.log("E objetos legendários que guardariam os segredos da programação orientada.");
+console.log("A jornada estava longe do fim - era apenas o início de uma saga maior.");
+console.log("Pois " + nome + " havia provado ser digno do título supremo:");
+console.log("ARQUI-MAGO DOS ALGORITMOS ETERNOS ");
